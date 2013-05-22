@@ -2,8 +2,8 @@ dslexp3<br/>
 =======<br/>
 Code rules<br/>
 	A. 用DE2預設的PIN NAME<br/>
-	B. 檔案變數小寫、複合字用底線分隔，例如control_unit<br/>
-	C. Module, Task, Function 首字大寫<br/>
+	B. Module, Task, Function 首字大寫<br/>
+	C. 老師PDF有的就按照老師PDF?<br/>
 <br/>
 1. 主架構 Main Architecture & Memory mapping & Migration<br/>
 	主要工作：開檔設好變數名稱、將記憶體跟暫存器輸出到LCD, LED, 7-SEG上、最後整合<br/>
@@ -21,6 +21,7 @@ Code rules<br/>
 		CPU Complete Instruction Set & Implementations <br/>
 		Full Report Migration<br/>
 4. 組合語言計算機 Calculator Machine Code ( SIMP 16 )<br/>
+	負責：游斯涵&何柏勳
 	主要工作：設計大算盤 ( 16 位元架構 )、最後輸出binary程式碼<br/>
 	負責報告：<br/>
 		Demo Machine Code Description<br/>
