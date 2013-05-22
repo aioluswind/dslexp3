@@ -1,0 +1,85 @@
+Instruction			OP1					OP2                 OP3
+Load Rx, #imm    	00000000 0000xxxx   dddddddd dddddddd   -
+
+Load Rx, [Ry]       00000000 xxxxyyyy   -                   -
+
+Move Rx, Ry         00000001 xxxxyyyy   -                   -   
+
+Swap Rx, Ry			00000010 xxxxyyyy   -                   -
+
+Push Rx             00000011 0000xxxx   -                   -
+
+Pop Rx              00000100 0000xxxx   -                   -
+
+-----------------------------------------------------------------------------
+Instruction			OP1					OP2                 OP3
+Load Rx, [mem]      00010000 0000xxxx   llllllll llllllll   hhhhhhhh hhhhhhhh
+
+Store [mem], Rx     00010001 0000xxxx	llllllll llllllll 	hhhhhhhh hhhhhhhh
+
+-----------------------------------------------------------------------------
+Instruction			OP1					OP2                 OP3
+Add Rx, Ry          00100000 xxxxyyyy   -                   -                   
+
+Mul Rx, Ry			00100001 xxxxyyyy   -                   -    
+
+Sub Rx, Ry          00100010 xxxxyyyy   -                   -    
+
+Div Rx, Ry          00100011 xxxxyyyy   -                   -    
+
+And Rx, Ry          00100100 xxxxyyyy   -                   -    
+
+Xor Rx, Ry          00100101 xxxxyyyy   -                   -    
+
+Or Rx, Ry           00100110 xxxxyyyy   -                   -    
+
+-----------------------------------------------------------------------------
+Instruction			OP1					OP2                 OP3
+Jump Loc			00110000 00000000   llllllll lllllllll  hhhhhhhh hhhhhhhh 		
+
+Jump.C Loc          00110001 00000000   llllllll lllllllll  hhhhhhhh hhhhhhhh 
+
+Jump.NC Loc         00110010 00000000   llllllll lllllllll  hhhhhhhh hhhhhhhh 
+
+-----------------------------------------------------------------------------
+Instruction			OP1					OP2                 OP3
+Clear.C				01000000 00000000   -                   -
+
+Set.C				01000001 00000000   -                   -
+
+Test.biti Rx		01000010 0000xxxx   -                   -
+
+
+
+
+
+
+
+/**
+	Former 4 numbers                      Latter 4 numbers
+	0000 Load/Move/Swap/Push/Pop          0000 Load
+										  0001 Move
+				                          0010 Swap
+				                          0011 Push
+										  0100 Pop
+	
+	0001 Memory               			  0000 Add 
+										  0001 Mul
+										  0010 Sub
+										  0011 Div
+										  0100 And
+										  0101 Xor
+										  0110 Or
+										  
+	0010 ALU                              0010 Swap
+	
+	
+	0011 Jump                             0000 Jump
+										  0001 Jump.C
+										  0010 Jump.NC
+										  
+	0100 Clear/Set/Test.biti			  0000 Clear.C	
+										  0001 Set.C
+										  0010 Test.biti
+	
+*/
